@@ -70,7 +70,7 @@ void SonarVisual::Load()
   dPtr->sonarRay->AddPoint(0, 0, 0);
   dPtr->sonarRay->SetPoint(0, ignition::math::Vector3d::Zero);
 
-  this->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  this->SetVisibilityFlags(GZ_VISIBILITY_ALL);
 }
 
 /////////////////////////////////////////////////

@@ -113,7 +113,7 @@ void LogicalCameraVisual::Load(const msgs::LogicalCameraSensor &_msg)
 
 
   GZ_OGRE_SET_MATERIAL_BY_NAME(line, "Gazebo/WhiteGlow");
-  line->setVisibilityFlags(GZ_VISIBILITY_GUI);
+  line->setVisibilityFlags(GZ_VISIBILITY_ALL);
 
   // Draw green lines from the near clipping plane to the origin
   DynamicLines *sourceLine = this->CreateDynamicLine(RENDERING_LINE_LIST);
@@ -134,9 +134,9 @@ void LogicalCameraVisual::Load(const msgs::LogicalCameraSensor &_msg)
         _msg.near_clip(), nearWidth, -nearHeight));
 
   GZ_OGRE_SET_MATERIAL_BY_NAME(sourceLine, "Gazebo/PurpleGlow");
-  sourceLine->setVisibilityFlags(GZ_VISIBILITY_GUI);
+  sourceLine->setVisibilityFlags(GZ_VISIBILITY_ALL);
 
-  this->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  this->SetVisibilityFlags(GZ_VISIBILITY_ALL);
 
   if (this->dataPtr->parent)
     this->dataPtr->parent->AttachVisual(shared_from_this());

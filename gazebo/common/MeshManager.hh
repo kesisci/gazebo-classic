@@ -102,6 +102,7 @@ namespace gazebo
       /// \param[in] _name the name of the mesh to look for
       /// \return the mesh or nullptr if not found
       public: const Mesh *GetMesh(const std::string &_name) const;
+      public: Mesh * GetMeshPtr(const std::string & );
 
       /// \brief Return true if the mesh exists.
       /// \param[in] _name the name of the mesh
@@ -266,7 +267,7 @@ namespace gazebo
 
       /// \internal
       /// \brief Pointer to private data.
-      private: MeshManagerPrivate *dataPtr;
+      public: MeshManagerPrivate *dataPtr;
     };
     /// \}
   }

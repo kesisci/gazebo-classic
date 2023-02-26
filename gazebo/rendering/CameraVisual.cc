@@ -94,7 +94,7 @@ void CameraVisual::Load(const msgs::CameraSensor &_msg)
         this->Name() + "__floor");
   planeEnt->setMaterialName(this->Name()+"_RTT_material");
   planeEnt->setCastShadows(false);
-  planeEnt->setVisibilityFlags(GZ_VISIBILITY_GUI);
+  planeEnt->setVisibilityFlags(GZ_VISIBILITY_ALL);
 
   DynamicLines *line = this->CreateDynamicLine(RENDERING_LINE_LIST);
 
@@ -111,12 +111,12 @@ void CameraVisual::Load(const msgs::CameraSensor &_msg)
   line->AddPoint(ignition::math::Vector3d(dist, width*0.5, -height*0.5));
 
   GZ_OGRE_SET_MATERIAL_BY_NAME(line, "Gazebo/WhiteGlow");
-  line->setVisibilityFlags(GZ_VISIBILITY_GUI);
+  line->setVisibilityFlags(GZ_VISIBILITY_ALL);
 
   this->AttachObject(planeEnt);
   dPtr->camera->AttachToVisual(this->GetId(), true, 0, 0);
 
-  this->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  this->SetVisibilityFlags(GZ_VISIBILITY_ALL);
 
   if (dPtr->parent)
     dPtr->parent->AttachVisual(shared_from_this());

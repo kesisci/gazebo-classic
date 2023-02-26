@@ -1928,7 +1928,7 @@ TEST_F(Visual_TEST, VisibilityFlags)
   // set visibility flags - by default they cascade
 
   // cylinder
-  uint32_t newCylinderVisibilityFlags = GZ_VISIBILITY_GUI;
+  uint32_t newCylinderVisibilityFlags = GZ_VISIBILITY_ALL;
   cylinder->SetVisibilityFlags(newCylinderVisibilityFlags);
   EXPECT_EQ(cylinder->GetVisibilityFlags(), newCylinderVisibilityFlags);
 

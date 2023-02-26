@@ -289,6 +289,19 @@ const Mesh *MeshManager::GetMesh(const std::string &_name) const
   return nullptr;
 }
 
+Mesh * MeshManager::GetMeshPtr(const std::string &  name)
+{
+  std::map<std::string, Mesh*>::iterator iter;
+
+  iter = this->dataPtr->meshes.find(name);
+
+  if (iter != this->dataPtr->meshes.end())
+    return iter->second;
+
+  return nullptr;
+}
+
+
 //////////////////////////////////////////////////
 bool MeshManager::HasMesh(const std::string &_name) const
 {

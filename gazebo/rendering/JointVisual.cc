@@ -117,7 +117,7 @@ void JointVisual::Load(ConstJointPtr &_msg)
     dPtr->parentAxisVis->SetScale(dPtr->scaleToLink);
 
   this->GetSceneNode()->setInheritScale(false);
-  this->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  this->SetVisibilityFlags(GZ_VISIBILITY_ALL);
 }
 
 /////////////////////////////////////////////////
@@ -137,7 +137,7 @@ void JointVisual::Load(ConstJointPtr &_msg,
   this->SetWorldPose(_worldPose);
 
   this->GetSceneNode()->setInheritScale(false);
-  this->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  this->SetVisibilityFlags(GZ_VISIBILITY_ALL);
 }
 
 /////////////////////////////////////////////////

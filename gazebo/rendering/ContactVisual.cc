@@ -201,7 +201,7 @@ void ContactVisual::CreateNewPoint()
   cp->depth->AddPoint(ignition::math::Vector3d(0, 0, 0));
   cp->depth->AddPoint(ignition::math::Vector3d(0, 0, -1));
 
-  cp->contactPointVis->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  cp->contactPointVis->SetVisibilityFlags(GZ_VISIBILITY_ALL);
   cp->contactPointVis->SetVisible(false);
 
   dPtr->points.push_back(cp);

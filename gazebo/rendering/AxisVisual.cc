@@ -88,7 +88,7 @@ void AxisVisual::Load()
       ignition::math::Quaterniond(ignition::math::Vector3d(1, 0, 0),
         IGN_DTOR(-90)));
 
-  this->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  this->SetVisibilityFlags(GZ_VISIBILITY_ALL);
 }
 
 /////////////////////////////////////////////////

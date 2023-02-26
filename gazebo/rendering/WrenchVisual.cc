@@ -149,7 +149,7 @@ void WrenchVisual::Load(ConstJointPtr &_msg)
   GZ_OGRE_SET_MATERIAL_BY_NAME(dPtr->forceLine,
       "__GAZEBO_TRANS_PURPLE_MATERIAL__");
 
-  this->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  this->SetVisibilityFlags(GZ_VISIBILITY_ALL);
 
   dPtr->connections.push_back(
       event::Events::ConnectPreRender(

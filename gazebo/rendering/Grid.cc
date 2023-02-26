@@ -145,7 +145,7 @@ void Grid::Init()
   this->dataPtr->manualObject =
       this->dataPtr->scene->OgreSceneManager()->createManualObject(
       this->dataPtr->name);
-  this->dataPtr->manualObject->setVisibilityFlags(GZ_VISIBILITY_GUI);
+  this->dataPtr->manualObject->setVisibilityFlags(GZ_VISIBILITY_ALL);
 
   this->dataPtr->manualObject->setDynamic(false);
   // this->dataPtr->manualObject->setRenderQueueGroup(

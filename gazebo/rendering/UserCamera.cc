@@ -188,7 +188,7 @@ void UserCamera::Init()
   x->position(0, 0, 0);
   x->position(1, 0, 0);
   x->end();
-  x->setVisibilityFlags(GZ_VISIBILITY_GUI);
+  x->setVisibilityFlags(GZ_VISIBILITY_ALL);
 
   Ogre::ManualObject *y =
     this->scene->OgreSceneManager()->createManualObject("MyYAxis");
@@ -196,7 +196,7 @@ void UserCamera::Init()
   y->position(0, 0, 0);
   y->position(0, 1, 0);
   y->end();
-  y->setVisibilityFlags(GZ_VISIBILITY_GUI);
+  y->setVisibilityFlags(GZ_VISIBILITY_ALL);
 
   Ogre::ManualObject *z =
     this->scene->OgreSceneManager()->createManualObject("MyZAxis");
@@ -204,7 +204,7 @@ void UserCamera::Init()
   z->position(0, 0, 0);
   z->position(0, 0, 1);
   z->end();
-  z->setVisibilityFlags(GZ_VISIBILITY_GUI);
+  z->setVisibilityFlags(GZ_VISIBILITY_ALL);
 
   this->axisNode->attachObject(x);
   this->axisNode->attachObject(y);

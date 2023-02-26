@@ -150,7 +150,7 @@ void LaserVisual::Update()
           this->CreateDynamicLine(rendering::RENDERING_LINE_LIST));
       GZ_OGRE_SET_MATERIAL_BY_NAME(dPtr->rayLines[j], "Gazebo/BlueLaser");
 
-      this->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+      this->SetVisibilityFlags(GZ_VISIBILITY_ALL);
     }
     dPtr->deadzoneRayFans[j]->SetPoint(0, offset.Pos());
 

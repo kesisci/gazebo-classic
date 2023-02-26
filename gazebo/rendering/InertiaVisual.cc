@@ -119,7 +119,7 @@ void InertiaVisual::Load(const ignition::math::Pose3d &_pose,
   // Inertia indicator: equivalent box of uniform density
   boxVis->AttachMesh("unit_box");
 
-  boxVis->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  boxVis->SetVisibilityFlags(GZ_VISIBILITY_ALL);
   boxVis->SetMaterial("__GAZEBO_TRANS_PURPLE_MATERIAL__");
   boxVis->SetCastShadows(false);
 
@@ -127,5 +127,5 @@ void InertiaVisual::Load(const ignition::math::Pose3d &_pose,
   boxVis->SetPosition(_pose.Pos());
   boxVis->SetRotation(_pose.Rot());
 
-  this->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  this->SetVisibilityFlags(GZ_VISIBILITY_ALL);
 }

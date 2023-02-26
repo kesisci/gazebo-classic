@@ -379,7 +379,7 @@ std::string BuildingMaker::AddWindow(const QVector3D &_size,
   windowManip->SetLevel(this->dataPtr->currentLevel);
   this->dataPtr->allItems[linkName] = windowManip;
 
-  linkVisual->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  linkVisual->SetVisibilityFlags(GZ_VISIBILITY_ALL);
   this->BuildingChanged();
   return linkName;
 }
@@ -426,7 +426,7 @@ std::string BuildingMaker::AddDoor(const QVector3D &_size,
   doorManip->SetLevel(this->dataPtr->currentLevel);
   this->dataPtr->allItems[linkName] = doorManip;
 
-  linkVisual->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  linkVisual->SetVisibilityFlags(GZ_VISIBILITY_ALL);
   this->BuildingChanged();
   return linkName;
 }
@@ -503,7 +503,7 @@ std::string BuildingMaker::AddStairs(const QVector3D &_size,
   stairsManip->SetPose(_pos.x(), _pos.y(), _pos.z(), 0, 0, _angle);
   this->dataPtr->allItems[linkName] = stairsManip;
 
-  linkVisual->SetVisibilityFlags(GZ_VISIBILITY_GUI |
+  linkVisual->SetVisibilityFlags(GZ_VISIBILITY_ALL |
       GZ_VISIBILITY_SELECTABLE);
   this->BuildingChanged();
 
@@ -618,7 +618,7 @@ void BuildingMaker::Reset()
 
   this->dataPtr->previewVisual->Load();
   this->dataPtr->previewVisual->SetPose(ignition::math::Pose3d::Zero);
-  this->dataPtr->previewVisual->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  this->dataPtr->previewVisual->SetVisibilityFlags(GZ_VISIBILITY_ALL);
 
   for (auto it : this->dataPtr->allItems)
     delete it.second;

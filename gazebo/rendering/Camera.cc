@@ -184,7 +184,7 @@ void Camera::Load()
 
   // Only create a command subscription for real cameras. Ignore camera's
   // created for visualization purposes.
-  if (this->name.find("_GUIONLY_") == std::string::npos)
+  if (this->name.find("_GUIONLYX_") == std::string::npos)
   {
     std::string topicName = this->Name();
     boost::replace_all(topicName, "::", "/");

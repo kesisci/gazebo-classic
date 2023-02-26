@@ -3236,7 +3236,7 @@ void Visual::ShowCollision(bool _show)
 
         visual->SetType(it->first);
         visual->SetVisible(_show);
-        visual->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+        visual->SetVisibilityFlags(GZ_VISIBILITY_ALL);
         visual->SetWireframe(this->dataPtr->scene->Wireframe());
       }
 

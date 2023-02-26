@@ -54,7 +54,7 @@ OrbitViewController::OrbitViewController(UserCameraPtr _camera,
   this->refVisual->SetCastShadows(false);
   this->refVisual->SetMaterial("Gazebo/YellowTransparent");
   this->refVisual->SetVisible(false);
-  this->refVisual->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  this->refVisual->SetVisibilityFlags(GZ_VISIBILITY_ALL);
 }
 
 //////////////////////////////////////////////////

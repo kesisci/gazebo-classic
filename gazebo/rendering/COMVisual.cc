@@ -157,7 +157,7 @@ void COMVisual::Load()
 
   sphereVis->SetMaterial("Gazebo/CoM");
   sphereVis->SetCastShadows(false);
-  sphereVis->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  sphereVis->SetVisibilityFlags(GZ_VISIBILITY_ALL);
 
   // CoM position indicator
   ignition::math::Vector3d p1(0, 0,
@@ -191,7 +191,7 @@ void COMVisual::Load()
   dPtr->crossLines->AddPoint(p5);
   dPtr->crossLines->AddPoint(p6);
 
-  this->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  this->SetVisibilityFlags(GZ_VISIBILITY_ALL);
 }
 
 /////////////////////////////////////////////////

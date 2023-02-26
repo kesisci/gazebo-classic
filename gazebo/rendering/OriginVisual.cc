@@ -70,5 +70,5 @@ void OriginVisual::Load()
   dPtr->zLine->AddPoint(ignition::math::Vector3d::Zero);
   dPtr->zLine->AddPoint(ignition::math::Vector3d::UnitZ*dPtr->length);
 
-  this->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  this->SetVisibilityFlags(GZ_VISIBILITY_ALL);
 }

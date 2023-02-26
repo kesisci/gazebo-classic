@@ -84,7 +84,7 @@ void ArrowVisual::Load()
 
   this->ShowRotation(false);
 
-  this->SetVisibilityFlags(GZ_VISIBILITY_GUI);
+  this->SetVisibilityFlags(GZ_VISIBILITY_ALL);
 }
 
 /////////////////////////////////////////////////

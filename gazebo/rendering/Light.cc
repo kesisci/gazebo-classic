@@ -226,7 +226,7 @@ void Light::CreateVisual()
 
     GZ_OGRE_SET_MATERIAL_BY_NAME(this->dataPtr->line, "Gazebo/LightOn");
 
-    this->dataPtr->line->setVisibilityFlags(GZ_VISIBILITY_GUI);
+    this->dataPtr->line->setVisibilityFlags(GZ_VISIBILITY_ALL);
 
     this->dataPtr->visual->SetVisible(true);
 
